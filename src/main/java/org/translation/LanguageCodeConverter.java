@@ -40,6 +40,8 @@ public class LanguageCodeConverter {
             // Task: use lines to populate the instance variable
             //           tip: you might find it convenient to create an iterator using lines.iterator()
             Iterator<String> iterator = lines.iterator();
+            // Ignore the heading of the language-codes file.
+            iterator.next();
             while (iterator.hasNext()) {
                 String line = iterator.next();
                 String[] parts = line.split("\t");
