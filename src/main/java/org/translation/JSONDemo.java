@@ -34,7 +34,10 @@ public class JSONDemo {
      */
     public static String getKeyOneOfSecond(JSONArray jsonArray) {
         // TODO: Complete this method.
-        return "";
+
+        //Simon's implementation
+        JSONObject jsonObject = jsonArray.getJSONObject(1);
+        return jsonObject.getString("key1");
     }
 
 }

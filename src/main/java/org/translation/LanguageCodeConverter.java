@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -36,8 +37,12 @@ public class LanguageCodeConverter {
 
             // TODO Task: use lines to populate the instance variable
             //           tip: you might find it convenient to create an iterator using lines.iterator()
+            Iterator<String> iterator = lines.iterator();
+            while (iterator.hasNext()) {
+                String line = iterator.next();
+                String[] parts = line.split("\t");
 
-            // Checkstyle: '}' on next line should be alone on a line.
+            }
         }
         catch (IOException | URISyntaxException ex) {
             throw new RuntimeException(ex);
